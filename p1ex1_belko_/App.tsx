@@ -10,7 +10,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.paragraph}>
-        Техникум Информатики и Права Белько ахаха смешинка
+        Техникум Информатики и Права Белько смешинка
       </Text>
       <Card>
         <AssetExample />
