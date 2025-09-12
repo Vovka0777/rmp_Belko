@@ -26,12 +26,11 @@ const Cat = (props: CatProps) => {
 
 const Cafe = () => {
   return (
-    <>
-      <p><Cat name="Вася"/>
+    <View style={{flex:1}}>
+    <Cat name="Вася"/>
       <Cat name="Рыжик" />
       <Cat name="Барсик" />
-      </p>
-    </>
+    </View>
   );
 };
 
