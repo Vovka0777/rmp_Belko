@@ -11,7 +11,7 @@ const Flex = () => {
         },
       ]}>
       <View style={{flex: 2, backgroundColor: 'green'}} />
-      <View style={{flex: 2, backgroundColor: 'white'}} />
+      <View style={{flex: 3, backgroundColor: 'white'}} />
       <View style={{flex: 2, backgroundColor: 'red'}} />
     </View>
   );
