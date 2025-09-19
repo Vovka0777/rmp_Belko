@@ -6,13 +6,16 @@ type FrogProps = {
 };
 
 const Frog = (props: FrogProps) => {
-  const [isHungry, setIsHungry] = useState(true);
+  
 
   return (
     <View>
+      <Text>
+        Я {props.name}, и я {isHungry ? 'голоднен' : 'сыт'}!
+      </Text>
       <Button
         onPress={() => {
-          setIsHungry(false);
+          exNumber(false);
         }}
         disabled={!isHungry}
         title={isHungry ? 'Покорми меня, пожалуйста!' : 'Спасибо!'}
@@ -22,11 +25,12 @@ const Frog = (props: FrogProps) => {
 };
 
 const Lake = () => {
+  const [isHungry, exNumber] = useState(true);
   return (
     <View style={{flex:1}}>
-    <Frog color="red"/>
-      <Frog color="yellow" />
-      <Frog color="green" />
+    <Frog name="Вася"/>
+      <Frog name="Рыжик" />
+      <Frog name="Барсик" />
     </View>
   );
 };
