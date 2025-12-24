@@ -31,10 +31,12 @@ export default function ContactsScreen({ navigation }: any) {
     <ScrollView>
       {contacts.map(contact => (
         <TaskItem
-          key={contact.id}
-          item={contact}
-          onPress={() => navigation.navigate('Details', { item: contact })}
-        />
+  key={contact.id}
+  item={contact}
+  iconName="people"        // Иконка людей
+  color="#34C759"          // Зеленый цвет
+  onPress={() => navigation.navigate('Details', { item: contact, title: 'Контакт' })}
+/>
       ))}
     </ScrollView>
   );

@@ -17,7 +17,7 @@ export default function TasksScreen({ navigation }: any) {
         offset: 0,
         pageSize: 10,
         sourceId: '797f5a94-3689-4ac8-82fd-d749511ea2b2',
-        fields: 'id,name',
+        fields: 'id,name,description',
       }),
     })
       .then(r => r.json())
@@ -31,10 +31,12 @@ export default function TasksScreen({ navigation }: any) {
     <ScrollView>
       {tasks.map(task => (
         <TaskItem
-          key={task.id}
-          item={task}
-          onPress={() => navigation.navigate('Details', { item: task })}
-        />
+  key={task.id}
+  item={task}
+  iconName="checkbox"      // Иконка галочки для задач
+  color="#4A90E2"          // Синий цвет
+  onPress={() => navigation.navigate('Details', { item: task, title: 'Задача' })}
+/>
       ))}
     </ScrollView>
   );

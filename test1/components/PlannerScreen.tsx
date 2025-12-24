@@ -38,11 +38,12 @@ export default function ReportsScreen({ navigation }: any) {
     <ScrollView style={{ padding: 10 }}>
       {reports.map(report => (
         <TaskItem
-          key={report.id}
-          item={report}
-          // При клике переходим в детали (возможно, понадобится отдельный экран ReportDetails)
-          onPress={() => navigation.navigate('ReportDetails', { item: report })}
-        />
+  key={report.id}
+  item={report}
+  iconName="stats-chart"   // Иконка графика
+  color="#FF9500"          // Оранжевый цвет
+  onPress={() => navigation.navigate('Details', { item: report, title: 'Отчет' })} // Исправил навигацию на Details, если ReportDetails еще нет
+/>
       ))}
     </ScrollView>
   );
